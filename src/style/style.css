@@ -1,0 +1,106 @@
+/* Styles for the phone-shaped background */
+  .phone-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Background color for the entire screen */
+  }
+  
+  .content-area {
+    width: 350px; /* Width of the phone screen */
+    height: 700px; /* Height of the phone screen */
+    background-color: white; /* Background color for the content area */
+    border: 2px solid black; /* Border around the phone screen */
+    border-radius: 20px; /* Corner radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Outer shadow contour */
+    /* Add any additional styling for content area (padding, margins, etc.) */
+  }
+  .status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 20px; /* Corner radius */
+  }
+  
+  .status-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-icon {
+    margin-left: 10px;
+    /* Add styles for icons (font-based icons or SVGs) */
+  }
+  
+  .status-time {
+    font-size: 14px;
+    margin-right: auto;
+  }
+  /* Default styles for trash can icon */
+  .trash-can {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .trash-icon {
+    font-size: 115px; /* Adjust icon size */
+  }
+  
+  /* Styles for when the icon is clicked (showInfo is true) */
+  .trash-can.open .trash-info {
+    position: fixed;
+    bottom: 350px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 328px; /* Adjust maximum width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  }
+  
+  .trash-info h3 {
+    font-size: 18px; /* Adjust heading font size */
+    margin-bottom: 10px;
+  }
+  
+  .trash-info p {
+    font-size: 14px; /* Adjust paragraph font size */
+    margin-bottom: 8px;
+  }
+  
+  /* CSS styles for the news scroll */
+  .news-scroll {
+    width: 100%;
+    height: 250px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .news-container {
+    display: inline-block;
+  }
+  
+  .news-item {
+    display: inline-block;
+    margin: 10px; /* Margin around each news block */
+    padding: 10px; /* Padding within each news block */
+    border: 1px solid #ccc; /* Border to separate each news block */
+    border-radius: 5px;
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: 80px;
+  }
+  
+  .news-details {
+    padding-top: 10px;
+    text-align: center;
+  }  
