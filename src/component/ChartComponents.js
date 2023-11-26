@@ -29,7 +29,7 @@ function LineChart({chartData}) {
           plugins: {
             title: {
               display: true,
-              text: "Users Gained between 2016-2020",
+              text: "Filled level",
               color: 'white' // Set title color to white
             },
             legend: {

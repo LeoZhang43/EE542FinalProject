@@ -95,6 +95,10 @@
     border-radius: 5px;
   }
   
+  .topic{
+    color: black;
+  }
+
   .news-item img {
     width: 100%;
     height: 80px;

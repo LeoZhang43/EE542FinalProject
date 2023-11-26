@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import LineChart from './ChartComponents';
 import { useHistory } from 'react-router-dom';
 
-const GoogleMaps = ({ positions }) => {
+const GoogleMaps = ({ locations }) => {
   const mapRef = useRef(null);
   let googleMap = null;
   let infoWindow = null;
@@ -10,22 +10,24 @@ const GoogleMaps = ({ positions }) => {
   useEffect(() => {
     if (mapRef && mapRef.current) {
       googleMap = new window.google.maps.Map(mapRef.current, {
-        center: { lat: -34.397, lng: 150.644 }, // Default center coordinates
+        center: { lat: 34.0607587, lng: -118.2942082 }, // Default center coordinates
         zoom: 12, // Default zoom level
       });
 
       infoWindow = new window.google.maps.InfoWindow(); // Create a single info window
 
-      addMarkers(googleMap, positions);
+      addMarkers(googleMap, locations);
     }
-  }, [positions]);
+  }, [locations]);
 
-  const addMarkers = (map, positions) => {
-    if (!map || !positions || !Array.isArray(positions)) return;
+  const addMarkers = (map, locations) => {
+    if (!map || !locations || !Array.isArray(locations)) return;
 
-    positions.forEach((position, index) => {
+    locations.forEach((location, index) => {
+      const lat = parseFloat(location.latitude); // Access latitude property
+      const lng = parseFloat(location.longitude); // Access longitude property
       const marker = new window.google.maps.Marker({
-        position,
+        position: { lat, lng },
         map,
       });
 
@@ -33,9 +35,11 @@ const GoogleMaps = ({ positions }) => {
         // const history = useHistory();
 
         const trashCanInfo = `
-          Trash Can ${index + 1}<br>
-          Location: ${position.lat}, ${position.lng}<br>
-          <br>
+          Trash can number ${index + 1}<br>
+          Locations lat ${lat} lng:${lng}<br>
+          Name ${location.name}<br>
+          Address ${location.address}<br>
+          Post ${location.post}<br>
           <a href="/about"}>Go to About</a>
           `;
 

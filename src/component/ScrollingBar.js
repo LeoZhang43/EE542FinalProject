@@ -5,15 +5,15 @@ import '../style/style.css';
 const newsData = [
   {
     id: 1,
-    title: 'One experts journey',
-    topic: 'Forest',
-    image: 'https://ciorg.imgix.net/images/default-source/default-album/ci_43099308?&auto=compress&auto=format&fit=crop&w=560&h=400', // Replace with actual image URL
+    title: 'Leavey Library',
+    filllevel: '8',
+    image: 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhc2glMjBjYW58ZW58MHx8MHx8fDA%3D', // Replace with actual image URL
   },
   {
     id: 2,
-    title: 'One experts journey',
-    topic: 'Technology',
-    image: 'https://ciorg.imgix.net/images/default-source/default-album/ci_63609300?&auto=compress&auto=format&fit=crop&w=560&h=400', // Replace with actual image URL
+    title: 'Near My Home',
+    filllevel: '20',
+    image: 'https://c8.alamy.com/comp/C8E3XB/overflowing-garbage-can-washington-dc-C8E3XB.jpg', // Replace with actual image URL
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const NewsScroll = () => {
             <img src={newsItem.image} alt={newsItem.title}/>
             <div className="news-details">
               <h3>{newsItem.title}</h3>
-              <p>{newsItem.topic}</p>
+              <p className='topic'>Current Fill Level<h6>{newsItem.filllevel}</h6></p>
             </div>
           </div>
         ))}

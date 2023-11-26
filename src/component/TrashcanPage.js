@@ -10,12 +10,12 @@ function TrashCanPage({ datas }) {
       <img src={data.img} alt="Trash Can" className="trash-can-image" />
       <p>
         <span className='title'>Fill level:</span>
-        <div className='number'>{data.status}/10</div>
+        <div className='number'>{data.status}/100</div>
       </p>
       {/* <p><span>Humidity:</span><div>{data.humidity}%</div></p> */}
       <p>
-        <span className='title'>Next Fill Time:</span>
-        <div className='number'>{data.nextFillTime}hours</div>
+        <span className='title'>Predicted Fill Time:</span>
+        <div className='number'>11/25/2023 15:58</div>
       </p>
 
       {/* Display the line chart */}
